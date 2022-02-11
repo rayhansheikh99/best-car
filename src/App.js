@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import { BeakerIcon } from '@heroicons/react/solid'
+import Home from './Pages/Home/Home';
 
 function App() {
   return (
-    <h1 className="text-6xl font-bold">
-      Hello world!
-    </h1>
+   <div>
+     <Home/>
+   </div>
   );
 }
 
