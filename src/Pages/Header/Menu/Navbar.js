@@ -1,51 +1,43 @@
-import { PhoneIcon, ShoppingCartIcon } from '@heroicons/react/outline';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 const Navbar = () => {
-    const navigation = [
-        { name: 'HOME', href: '/home' },
-        { name: 'CARS', href: '/products' },
-        { name: 'ABOUT', href: '/about' },
-        { name: 'CONTACT', href: '/contact' },
-        { name: 'DASHBOARD', href: '/dashboard' },
-        
-      ]
     return (
-    <div className="bg-indigo-600">
-        <div className="px-3 py-3 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center justify-between">
-            <div className="flex items-center flex-1 w-0">
-              <span className="flex p-2 bg-indigo-800 rounded-lg">
-                <PhoneIcon className="w-6 h-6 text-white" aria-hidden="true" />
-              </span>
-              <p className="ml-3 font-medium text-white truncate">
-                <span className="inline">+880123688888</span>
-              </p>
-              <div className='mx-6'>
-              {navigation.map((item) => (
-                    <Link as={Link}  key={item.name} to={item.href} className="py-2 mx-2 font-medium text-white hover:border-b-2 hover:text-gray-300">
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-            </div>
-            <span className="flex p-2 mr-10 bg-indigo-800 rounded-lg">
-                <ShoppingCartIcon className="w-6 h-6 text-white" aria-hidden="true" />
-              </span>
-            <div className="flex-shrink-0 order-3 w-full mt-2 sm:order-2 sm:mt-0 sm:w-auto">
-            
-              <Link as={Link} to="/login"
-                className="flex items-center justify-center px-4 py-2 text-sm font-medium text-indigo-600 bg-white border border-transparent rounded-md shadow-sm hover:bg-indigo-100"
-              >
-                Login
-              </Link>
-            </div>
-            
-          </div>
-        </div>
-            
-        </div>
+
+<nav data-aos="flip-up" className="px-2 pb-0 bg-white border-gray-200 rounded sm:px-4 dark:bg-gray-800">
+<div className="container flex flex-wrap items-center justify-between mx-auto">
+<Link as={Link} to="/home" className="flex">
+<img className='h-24 w-28' src="https://logoeps.com/wp-content/uploads/2013/01/best-car-logo-vector.png" alt=""/>
+</Link>
+<button data-collapse-toggle="mobile-menu" type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
+<span className="sr-only">Open main menu</span>
+<svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path></svg>
+<svg className="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
+</button>
+<div className="hidden w-full md:block md:w-auto" id="mobile-menu">
+<ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+<li>
+<Link as={Link} to="/home" className="block pt-2 pb-2 pl-3 pr-4 text-gray-700 hover:border-b-2 hover:border-b-blue-700 md:hover:text-blue-700 md:bg-transparent dark:text-white" aria-current="page">HOME</Link>
+</li>
+<li>
+<Link as={Link} to="/products" className="block pt-2 pb-2 pl-3 pr-4 text-gray-700 hover:border-b-2 hover:border-b-blue-700 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-blue-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">CARS</Link>
+</li>
+<li>
+<Link as={Link} to="/dashboard" className="block pt-2 pb-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent hover:border-b-2 hover:border-b-blue-700 md:border-0 md:hover:text-blue-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">DASHBOARD</Link>
+</li>
+<li>
+<Link as={Link} to="/login" className="block pt-2 pb-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent hover:border-b-2 hover:border-b-blue-700 md:border-0 md:hover:text-blue-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">LOGIN</Link>
+</li>
+<li>
+<Link as={Link} to="/login" className="block pt-2 pb-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 hover:border-b-2 hover:border-b-blue-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">LOGOUT</Link>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+
     );
 };
 

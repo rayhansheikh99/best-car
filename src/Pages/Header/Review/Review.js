@@ -2,7 +2,7 @@ import React from 'react';
 
 const Review = () => {
     return (
-        <div data-aos="fade-up">
+        <div data-aos="zoom-in">
             <h5 className='mt-10 font-mono text-2xl font-bold text-center'>Customer Reviews</h5>
             <p class="text-xl italic mx-auto text-gray-700 max-w-4xl text-center mt-8">
         "Managing customer reviews is vital for modern businesses. Maximize the impact of what your customers are saying about our products"

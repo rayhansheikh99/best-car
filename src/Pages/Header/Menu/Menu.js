@@ -32,7 +32,7 @@ const Menu = () => {
 
           <Popover>
             <div className="relative px-4 pt-6 sm:px-6 lg:px-8">
-              <nav className="relative flex h-16 items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
+              <nav className="relative flex items-center justify-between h-16 sm:h-10 lg:justify-start" aria-label="Global">
                 <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                   <div className="flex items-center justify-between w-full md:w-auto">
                     <Link as={Link} to="/home">
@@ -53,7 +53,7 @@ const Menu = () => {
                 <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
                   
                   {navigation.map((item) => (
-                    <Link as={Link}  key={item.name} to={item.href} className="font-medium text-gray-500 hover:text-gray-900">
+                    <Link as={Link}  key={item.name} to={item.href} className="py-2 font-medium text-gray-500 hover:border-b-red-600 hover:border-b-2 hover:text-gray-900">
                       {item.name}
                     </Link>
                   ))}

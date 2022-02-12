@@ -4,16 +4,16 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   const today = new Date();
     return (
-        <div>
-            <footer class="text-center bg-gray-900 text-white">
-  <div class="container px-6 pt-6">
-    <div class="flex justify-center mb-6">
-      <a href="https://www.facebook.com/" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+        <div data-aos="zoom-in">
+            <footer className="text-center text-white bg-gray-900">
+  <div className="container px-6 pt-6">
+    <div className="flex justify-center mb-6">
+      <a href="https://www.facebook.com/" type="button" className="m-1 leading-normal text-white uppercase transition duration-150 ease-in-out border-2 border-white rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 w-9 h-9">
         <svg aria-hidden="true"
         focusable="false"
         data-prefix="fab"
         data-icon="facebook-f"
-        class="w-2 h-full mx-auto"
+        className="w-2 h-full mx-auto"
         role="img"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 320 512"
@@ -25,12 +25,12 @@ const Footer = () => {
         </svg>
       </a>
 
-      <a href="https://twitter.com/" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+      <a href="https://twitter.com/" type="button" className="m-1 leading-normal text-white uppercase transition duration-150 ease-in-out border-2 border-white rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 w-9 h-9">
         <svg aria-hidden="true"
         focusable="false"
         data-prefix="fab"
           data-icon="twitter"
-          class="w-3 h-full mx-auto"
+          className="w-3 h-full mx-auto"
           role="img"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
@@ -42,12 +42,12 @@ const Footer = () => {
         </svg>
       </a>
 
-      <a href="https://google.com/" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+      <a href="https://google.com/" type="button" className="m-1 leading-normal text-white uppercase transition duration-150 ease-in-out border-2 border-white rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 w-9 h-9">
         <svg aria-hidden="true"
         focusable="false"
         data-prefix="fab"
           data-icon="google"
-          class="w-3 h-full mx-auto"
+          className="w-3 h-full mx-auto"
           role="img"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 488 512"
@@ -59,12 +59,12 @@ const Footer = () => {
         </svg>
       </a>
 
-      <a href="https://instagram.com/" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+      <a href="https://instagram.com/" type="button" className="m-1 leading-normal text-white uppercase transition duration-150 ease-in-out border-2 border-white rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 w-9 h-9">
         <svg aria-hidden="true"
         focusable="false"
         data-prefix="fab"
         data-icon="instagram"
-          class="w-3 h-full mx-auto"
+          className="w-3 h-full mx-auto"
           role="img"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 448 512"
@@ -76,12 +76,12 @@ const Footer = () => {
         </svg>
       </a>
 
-      <a href="https://linkedin.com/" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+      <a href="https://linkedin.com/" type="button" className="m-1 leading-normal text-white uppercase transition duration-150 ease-in-out border-2 border-white rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 w-9 h-9">
         <svg aria-hidden="true"
         focusable="false"
         data-prefix="fab"
         data-icon="linkedin-in"
-          class="w-3 h-full mx-auto"
+          className="w-3 h-full mx-auto"
           role="img"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 448 512"
@@ -93,12 +93,12 @@ const Footer = () => {
         </svg>
       </a>
 
-      <a href="https://github.com/" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+      <a href="https://github.com/" type="button" className="m-1 leading-normal text-white uppercase transition duration-150 ease-in-out border-2 border-white rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 w-9 h-9">
         <svg aria-hidden="true"
         focusable="false"
         data-prefix="fab"
         data-icon="github"
-          class="w-3 h-full mx-auto"
+          className="w-3 h-full mx-auto"
           role="img"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 496 512"
@@ -113,17 +113,17 @@ const Footer = () => {
 
     <div>
       <form action="">
-        <div class="grid md:grid-cols-3 gird-cols-1 gap-4 flex justify-center items-center">
-          <div class="md:ml-auto md:mb-6">
-            <p class="">
+        <div className="flex grid items-center justify-center gap-4 md:grid-cols-3 gird-cols-1">
+          <div className="md:ml-auto md:mb-6">
+            <p className="">
               <strong>Keep in Touch</strong>
             </p>
           </div>
 
-          <div class="md:mb-6">
+          <div className="md:mb-6">
             <input
               type="text"
-              class="
+              className="
                 form-control
                 block
                 w-full
@@ -144,8 +144,8 @@ const Footer = () => {
               placeholder="Email address"/>
           </div>
 
-          <div class="md:mr-auto mb-6">
-            <button type="submit" class="inline-block px-6 py-2 border-2 border-white text-white font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">
+          <div className="mb-6 md:mr-auto">
+            <button type="submit" className="inline-block px-6 py-2 text-xs font-medium leading-tight text-white uppercase transition duration-150 ease-in-out border-2 border-white rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0">
               Subscribe
             </button>
           </div>
@@ -153,10 +153,10 @@ const Footer = () => {
       </form>
     </div>
 
-    <div class="grid lg:grid-cols-3 sm:grid-cols-2">
+    <div className="grid lg:grid-cols-3 sm:grid-cols-2">
 
-      <div class="mt-8">
-        <h4 className='font-bold text-2xl text-orange-300'>Our Address</h4>
+      <div className="mt-8">
+        <h4 className='text-2xl font-bold text-orange-300'>Our Address</h4>
         <p className='mt-5'>
         Road No. 1, Dhanmondi, Dhaka
         <br /> Dhaka Division, Bangladesh
@@ -166,23 +166,23 @@ const Footer = () => {
       <div className="mb-6">
                 <ul className='mt-8'>
                   
-                  <Link className="text-center block" as={Link} to="/home">Home</Link>
-                  <Link className="text-center block" as={Link} to="/products">Packages</Link>
-                  <Link className="text-center block" as={Link} to="/about">About Us</Link>
-                  <Link className="text-center block" as={Link} to="/contact">Contact Us</Link>
+                  <Link className="block text-center" as={Link} to="/home">Home</Link>
+                  <Link className="block text-center" as={Link} to="/products">Packages</Link>
+                  <Link className="block text-center" as={Link} to="/about">About Us</Link>
+                  <Link className="block text-center" as={Link} to="/contact">Contact Us</Link>
             
                 </ul>
       </div>
 
-      <div class="mt-8 ml-16">
+      <div className="mt-8 ml-16">
       <img className='h-28 w-60' src='https://www.seekpng.com/png/detail/208-2082472_we-accept-card-payments-visa-mastercard-decal-sticker.png' alt=''></img>
         
       </div>
     </div>
   </div>
 
-  <div class="text-center p-4">
-  <a class="text-white" href="/home"> Best Cars</a> © {today.getFullYear()} Copyright
+  <div className="p-4 text-center">
+  <a className="text-white" href="/home"> Best Cars</a> © {today.getFullYear()} Copyright
     
   </div>
 </footer>

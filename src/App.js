@@ -10,9 +10,10 @@ import 'aos/dist/aos.css';
 import About from './Pages/About/About';
 import Contact from "./Pages/Contact/Contact";
 import Dashboard from "./Pages/Dashboard/Dashboard";
-import Products from "./Pages/Products/Products";
 import Footer from "./Pages/Footer/Footer";
 import Login from "./Pages/Login/Login";
+import Signup from "./Pages/Signup/Signup";
+import Allcar from "./Pages/Allcar/Allcar";
 
 function App() {
   AOS.init();
@@ -36,10 +37,13 @@ function App() {
            <Dashboard/>
          </Route>
          <Route path="/products">
-           <Products/>
+           <Allcar/>
          </Route>
          <Route path="/login">
            <Login/>
+         </Route>
+         <Route path="/signup">
+           <Signup/>
          </Route>
     
      
