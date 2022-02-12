@@ -1,12 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const today = new Date();
     return (
         <div>
             <footer class="text-center bg-gray-900 text-white">
   <div class="container px-6 pt-6">
     <div class="flex justify-center mb-6">
-      <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+      <a href="https://www.facebook.com/" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
         <svg aria-hidden="true"
         focusable="false"
         data-prefix="fab"
@@ -23,7 +25,7 @@ const Footer = () => {
         </svg>
       </a>
 
-      <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+      <a href="https://twitter.com/" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
         <svg aria-hidden="true"
         focusable="false"
         data-prefix="fab"
@@ -40,7 +42,7 @@ const Footer = () => {
         </svg>
       </a>
 
-      <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+      <a href="https://google.com/" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
         <svg aria-hidden="true"
         focusable="false"
         data-prefix="fab"
@@ -57,7 +59,7 @@ const Footer = () => {
         </svg>
       </a>
 
-      <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+      <a href="https://instagram.com/" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
         <svg aria-hidden="true"
         focusable="false"
         data-prefix="fab"
@@ -74,7 +76,7 @@ const Footer = () => {
         </svg>
       </a>
 
-      <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+      <a href="https://linkedin.com/" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
         <svg aria-hidden="true"
         focusable="false"
         data-prefix="fab"
@@ -91,7 +93,7 @@ const Footer = () => {
         </svg>
       </a>
 
-      <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+      <a href="https://github.com/" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
         <svg aria-hidden="true"
         focusable="false"
         data-prefix="fab"
@@ -114,7 +116,7 @@ const Footer = () => {
         <div class="grid md:grid-cols-3 gird-cols-1 gap-4 flex justify-center items-center">
           <div class="md:ml-auto md:mb-6">
             <p class="">
-              <strong>Sign up for our newsletter</strong>
+              <strong>Keep in Touch</strong>
             </p>
           </div>
 
@@ -151,96 +153,37 @@ const Footer = () => {
       </form>
     </div>
 
-    <div class="mb-6">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-        eum harum corrupti dicta, aliquam sequi voluptate quas.
-      </p>
-    </div>
+    <div class="grid lg:grid-cols-3 sm:grid-cols-2">
 
-    <div class="grid lg:grid-cols-4 md:grid-cols-2">
-      <div class="mb-6">
-        <h5 class="uppercase font-bold mb-2.5">Links</h5>
-
-        <ul class="list-none mb-0">
-          <li>
-            <a href="#!" class="text-white">Link 1</a>
-          </li>
-          <li>
-            <a href="#!" class="text-white">Link 2</a>
-          </li>
-          <li>
-            <a href="#!" class="text-white">Link 3</a>
-          </li>
-          <li>
-            <a href="#!" class="text-white">Link 4</a>
-          </li>
-        </ul>
+      <div class="mt-8">
+        <h4 className='font-bold text-2xl text-orange-300'>Our Address</h4>
+        <p className='mt-5'>
+        Road No. 1, Dhanmondi, Dhaka
+        <br /> Dhaka Division, Bangladesh
+        </p>
       </div>
 
-      <div class="mb-6">
-        <h5 class="uppercase font-bold mb-2.5">Links</h5>
-
-        <ul class="list-none mb-0">
-          <li>
-            <a href="#!" class="text-white">Link 1</a>
-          </li>
-          <li>
-            <a href="#!" class="text-white">Link 2</a>
-          </li>
-          <li>
-            <a href="#!" class="text-white">Link 3</a>
-          </li>
-          <li>
-            <a href="#!" class="text-white">Link 4</a>
-          </li>
-        </ul>
+      <div className="mb-6">
+                <ul className='mt-8'>
+                  
+                  <Link className="text-center block" as={Link} to="/home">Home</Link>
+                  <Link className="text-center block" as={Link} to="/products">Packages</Link>
+                  <Link className="text-center block" as={Link} to="/about">About Us</Link>
+                  <Link className="text-center block" as={Link} to="/contact">Contact Us</Link>
+            
+                </ul>
       </div>
 
-      <div class="mb-6">
-        <h5 class="uppercase font-bold mb-2.5">Links</h5>
-
-        <ul class="list-none mb-0">
-          <li>
-            <a href="#!" class="text-white">Link 1</a>
-          </li>
-          <li>
-            <a href="#!" class="text-white">Link 2</a>
-          </li>
-          <li>
-            <a href="#!" class="text-white">Link 3</a>
-          </li>
-          <li>
-            <a href="#!" class="text-white">Link 4</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h5 class="uppercase font-bold mb-2.5">Links</h5>
-
-        <ul class="list-none mb-0">
-          <li>
-            <a href="#!" class="text-white">Link 1</a>
-          </li>
-          <li>
-            <a href="#!" class="text-white">Link 2</a>
-          </li>
-          <li>
-            <a href="#!" class="text-white">Link 3</a>
-          </li>
-          <li>
-            <a href="#!" class="text-white">Link 4</a>
-          </li>
-        </ul>
+      <div class="mt-8 ml-16">
+      <img className='h-28 w-60' src='https://www.seekpng.com/png/detail/208-2082472_we-accept-card-payments-visa-mastercard-decal-sticker.png' alt=''></img>
+        
       </div>
     </div>
   </div>
 
   <div class="text-center p-4">
-    © 2022 Copyright:
-    <a class="text-white" href="/home"> Best Cars</a>
+  <a class="text-white" href="/home"> Best Cars</a> © {today.getFullYear()} Copyright
+    
   </div>
 </footer>
         </div>

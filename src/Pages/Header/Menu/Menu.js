@@ -2,17 +2,22 @@ import React from 'react';
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { Link } from 'react-router-dom';
 const Menu = () => {
 
   const navigation = [
-    { name: 'HOME', href: '#' },
-    { name: 'CARS', href: '#' },
-    { name: 'CONTACT', href: '#' },
-    { name: 'DASHBOARD', href: '#' },
+    { name: 'HOME', href: '/home' },
+    { name: 'CARS', href: '/products' },
+    { name: 'ABOUT', href: '/about' },
+    { name: 'CONTACT', href: '/contact' },
+    { name: 'DASHBOARD', href: '/dashboard' },
+    
   ]
 
   return (
-    <div className="relative mb-10 overflow-hidden bg-white">
+    <div data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="1500" className="relative mb-10 overflow-hidden bg-white">
       <div className="mx-auto max-w-7xl">
         <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
           <svg
@@ -27,16 +32,16 @@ const Menu = () => {
 
           <Popover>
             <div className="relative px-4 pt-6 sm:px-6 lg:px-8">
-              <nav className="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
+              <nav className="relative flex h-16 items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
                 <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                   <div className="flex items-center justify-between w-full md:w-auto">
-                    <a href="/home">
+                    <Link as={Link} to="/home">
                       <span className="sr-only">Workflow</span>
                       <img
-                        className="w-auto h-8 sm:h-10"
-                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt=''
+                        className="w-auto h-16 sm:h-36"
+                        src="https://logoeps.com/wp-content/uploads/2013/01/best-car-logo-vector.png" alt=''
                       />
-                    </a>
+                    </Link>
                     <div className="flex items-center -mr-2 md:hidden">
                       <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                         <span className="sr-only">Open main menu</span>
@@ -46,10 +51,11 @@ const Menu = () => {
                   </div>
                 </div>
                 <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
+                  
                   {navigation.map((item) => (
-                    <a key={item.name} href={item.href} className="font-medium text-gray-500 hover:text-gray-900">
+                    <Link as={Link}  key={item.name} to={item.href} className="font-medium text-gray-500 hover:text-gray-900">
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                   {/* <a href="m" className="font-medium text-indigo-600 hover:text-indigo-500">
                     Log in
@@ -106,7 +112,7 @@ const Menu = () => {
 
           <main className="px-4 mx-auto mt-10 max-w-7xl sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
             <div className="sm:text-center lg:text-left">
-              <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 animate-pulse sm:text-5xl md:text-6xl">
+              <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
                 <span className="block xl:inline">The best quality cars</span>{' '}
                 <span className="block text-indigo-600 xl:inline">we given</span>
               </h1>
@@ -115,12 +121,12 @@ const Menu = () => {
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
-                  <a
-                    href="/home"
+                  <Link as={Link}
+                    to="/products"
                     className="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
                   >
                     EXPLORE CARS
-                  </a>
+                  </Link>
                 </div>
               
               </div>
