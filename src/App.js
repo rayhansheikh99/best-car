@@ -14,6 +14,9 @@ import Footer from "./Pages/Footer/Footer";
 import Login from "./Pages/Login/Login";
 import Signup from "./Pages/Signup/Signup";
 import Allcar from "./Pages/Allcar/Allcar";
+import Myorders from "./Pages/Myorders/Myorders";
+import Givereview from "./Pages/Givereview/Givereview";
+import Payment from "./Pages/Payment/Payment";
 
 function App() {
   AOS.init();
@@ -35,6 +38,15 @@ function App() {
          </Route>
          <Route path="/dashboard">
            <Dashboard/>
+         </Route>
+         <Route path="/myorders">
+           <Myorders/>
+         </Route>
+         <Route path="/givereview">
+           <Givereview/>
+         </Route>
+         <Route path="/payment">
+           <Payment/>
          </Route>
          <Route path="/products">
            <Allcar/>

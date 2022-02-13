@@ -2,10 +2,8 @@ import React from 'react';
 
 const Slider = () => {
     return (
-        <div
-  id="carouselExampleCrossfade"
-  className="relative carousel slide carousel-fade"
-  data-bs-ride="carousel"
+        <div data-aos="fade-down"  data-aos-easing="linear" data-aos-duration="1500"       id="carouselExampleCrossfade" className="relative carousel slide carousel-fade"
+             data-bs-ride="carousel"
 >
   <div className="absolute bottom-0 left-0 right-0 flex justify-center p-0 mb-4 carousel-indicators">
     <button

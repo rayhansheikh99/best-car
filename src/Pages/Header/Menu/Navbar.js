@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
     return (
 
-<nav data-aos="flip-up" className="px-2 pb-0 bg-white border-gray-200 rounded sm:px-4 dark:bg-gray-800">
+<nav data-aos="fade-down"  data-aos-easing="linear" data-aos-duration="1500" className="px-2 pb-0 bg-white border-gray-200 rounded sm:px-4 dark:bg-gray-800">
 <div className="container flex flex-wrap items-center justify-between mx-auto">
 <Link as={Link} to="/home" className="flex">
 <img className='h-24 w-28' src="https://logoeps.com/wp-content/uploads/2013/01/best-car-logo-vector.png" alt=""/>
