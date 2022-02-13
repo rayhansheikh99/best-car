@@ -8,7 +8,7 @@ const Footer = () => {
             <footer className="text-center text-white bg-gray-900">
   <div className="container px-6 pt-6">
     <div className="flex justify-center mb-6">
-      <a href="https://www.facebook.com/" type="button" className="m-1 leading-normal text-white uppercase transition duration-150 ease-in-out border-2 border-white rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 w-9 h-9">
+      <a href="https://www.facebook.com/" type="button" target="_blank" className="m-1 leading-normal text-white uppercase transition duration-150 ease-in-out border-2 border-white rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 w-9 h-9" rel="noreferrer">
         <svg aria-hidden="true"
         focusable="false"
         data-prefix="fab"
@@ -113,7 +113,7 @@ const Footer = () => {
 
     <div>
       <form action="">
-        <div className="flex grid items-center justify-center gap-4 md:grid-cols-3 gird-cols-1">
+        <div className="flex items-center justify-center gap-4 md:grid-cols-3 gird-cols-1">
           <div className="md:ml-auto md:mb-6">
             <p className="">
               <strong>Keep in Touch</strong>

@@ -1,8 +1,10 @@
 import React from 'react';
-import { PhoneIcon, ShoppingCartIcon, SpeakerphoneIcon } from '@heroicons/react/outline'
+import { PhoneIcon, ShoppingCartIcon, SpeakerphoneIcon, UserIcon } from '@heroicons/react/outline'
 import { Link } from 'react-router-dom';
+import useAuth from './../../Hooks/useAuth';
 
 const Topbanner = () => {
+  const {user, logOut} = useAuth();
     return (
         <div data-aos="fade-down"
         data-aos-easing="linear"
@@ -22,20 +24,22 @@ const Topbanner = () => {
               <span className="flex p-2 bg-indigo-800 rounded-lg">
                 <PhoneIcon className="w-6 h-6 text-white" aria-hidden="true" />
               </span>
-              <p className="ml-3 font-medium text-white truncate">
+              <p className="ml-2 font-medium text-white truncate">
                 <span className="inline">+880123688888</span>
               </p>
             </div>
-            <span className="flex p-2 mr-10 bg-indigo-800 rounded-lg">
+            <span className="flex p-2 mr-24 bg-indigo-800 rounded-lg">
                 <ShoppingCartIcon className="w-6 h-6 text-white" aria-hidden="true" />
               </span>
-            <div className="flex-shrink-0 order-3 w-full mt-2 sm:order-2 sm:mt-0 sm:w-auto">
-            
-              <Link as={Link} to="/login"
-                className="flex items-center justify-center px-4 py-2 text-sm font-medium text-indigo-600 bg-white border border-transparent rounded-md shadow-sm hover:bg-indigo-50"
-              >
-                Login
-              </Link>
+            <div className="flex ">
+         
+      {user?.email?
+       <Link onClick={logOut} as={Link} to="/login" className='inline px-2 py-2 mt-1 mr-5 font-serif font-semibold text-center text-white bg-red-500 rounded hover:bg-blue-100 hover:text-orange-500'>Logout</Link>:
+      <Link as={Link} to="/login" className='p-2 font-bold text-center bg-white rounded hover:bg-gray-400 text-black-600'>Login</Link>}
+      {user?.email?
+      <p className='flex p-2 mt-2 font-mono font-semibold text-red-100'>
+        <UserIcon className='w-8 h-6 text-white'/>{user?.displayName}
+      </p>: ('')}
             </div>
             
           </div>

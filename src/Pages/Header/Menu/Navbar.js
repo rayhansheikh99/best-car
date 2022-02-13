@@ -1,8 +1,11 @@
+import { UserCircleIcon } from '@heroicons/react/outline';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useAuth from './../../../Hooks/useAuth';
 
 
 const Navbar = () => {
+    const {user, logOut} = useAuth();
     return (
 
 <nav data-aos="fade-down"  data-aos-easing="linear" data-aos-duration="1500" className="px-2 pb-0 bg-white border-gray-200 rounded sm:px-4 dark:bg-gray-800">
@@ -24,13 +27,16 @@ const Navbar = () => {
 <Link as={Link} to="/products" className="block pt-2 pb-2 pl-3 pr-4 text-gray-700 hover:border-b-2 hover:border-b-blue-700 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-blue-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">CARS</Link>
 </li>
 <li>
-<Link as={Link} to="/dashboard" className="block pt-2 pb-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent hover:border-b-2 hover:border-b-blue-700 md:border-0 md:hover:text-blue-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">DASHBOARD</Link>
+{user.email && <Link as={Link} to="/dashboard" className='block pt-2 pb-2 pl-3 pr-4 text-gray-700 hover:border-b-2 hover:border-b-blue-700 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-blue-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'>DASHBOARD</Link>}
 </li>
-<li>
-<Link as={Link} to="/login" className="block pt-2 pb-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent hover:border-b-2 hover:border-b-blue-700 md:border-0 md:hover:text-blue-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">LOGIN</Link>
-</li>
-<li>
-<Link as={Link} to="/login" className="block pt-2 pb-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 hover:border-b-2 hover:border-b-blue-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">LOGOUT</Link>
+<li className="flex ">
+{user?.email?
+       <Link onClick={logOut} as={Link} to="/login" className='inline px-2 py-2 mt-1 mr-5 text-center text-white bg-red-500 rounded'>LOGOUT</Link>:
+      <Link as={Link} to="/login" className='p-2 font-bold text-center bg-blue-500 rounded hover:bg-gray-400 text-black-600'>LOGIN</Link>}
+      {user?.email?
+      <p className='flex mt-2'>
+        <UserCircleIcon className='w-8 h-6'/>{user?.displayName}
+      </p>: ('')}
 </li>
 </ul>
 </div>

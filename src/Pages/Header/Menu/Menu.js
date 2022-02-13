@@ -3,14 +3,15 @@ import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Link } from 'react-router-dom';
+import useAuth from '../../../Hooks/useAuth';
 const Menu = () => {
-
+  const {user, logOut} = useAuth();
   const navigation = [
     { name: 'HOME', href: '/home' },
     { name: 'CARS', href: '/products' },
     { name: 'ABOUT', href: '/about' },
     { name: 'CONTACT', href: '/contact' },
-    { name: 'DASHBOARD', href: '/dashboard' },
+
     
   ]
 
@@ -57,6 +58,7 @@ const Menu = () => {
                       {item.name}
                     </Link>
                   ))}
+                  {user.email && <Link as={Link} to="/dashboard" className='py-2 font-medium text-gray-500 hover:border-b-red-600 hover:border-b-2 hover:text-gray-900'>DASHBOARD</Link>}
                   {/* <a href="m" className="font-medium text-indigo-600 hover:text-indigo-500">
                     Log in
                   </a> */}
@@ -103,6 +105,7 @@ const Menu = () => {
                         {item.name}
                       </a>
                     ))}
+                    
                   </div>
                   
                 </div>

@@ -17,11 +17,15 @@ import Allcar from "./Pages/Allcar/Allcar";
 import Myorders from "./Pages/Myorders/Myorders";
 import Givereview from "./Pages/Givereview/Givereview";
 import Payment from "./Pages/Payment/Payment";
+import AuthProvider from "./Contexts/AuthProvider";
+import CarDetails from './Pages/CarDetails/CarDetails';
+import Checkout from "./Pages/Checkout/Checkout";
 
 function App() {
   AOS.init();
   return (
    <div>
+     <AuthProvider>
      <Router>
        <Switch>
          <Route exact path="/">
@@ -35,6 +39,12 @@ function App() {
          </Route>
          <Route path="/contact">
            <Contact/>
+         </Route>
+         <Route path="/cardetails">
+           <CarDetails/>
+         </Route>
+         <Route path="/checkout">
+           <Checkout/>
          </Route>
          <Route path="/dashboard">
            <Dashboard/>
@@ -62,6 +72,7 @@ function App() {
       </Switch>
       <Footer/>
      </Router>
+    </AuthProvider>
    </div>
   );
 }
