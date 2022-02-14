@@ -14,12 +14,13 @@ import Footer from "./Pages/Footer/Footer";
 import Login from "./Pages/Login/Login";
 import Signup from "./Pages/Signup/Signup";
 import Allcar from "./Pages/Allcar/Allcar";
-import Myorders from "./Pages/Myorders/Myorders";
+import MyOrders from "./Pages/Myorders/MyOrders";
 import Givereview from "./Pages/Givereview/Givereview";
 import Payment from "./Pages/Payment/Payment";
 import AuthProvider from "./Contexts/AuthProvider";
 import CarDetails from './Pages/CarDetails/CarDetails';
 import Checkout from "./Pages/Checkout/Checkout";
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 
 function App() {
   AOS.init();
@@ -40,17 +41,17 @@ function App() {
          <Route path="/contact">
            <Contact/>
          </Route>
-         <Route path="/cardetails">
+         <PrivateRoute path="/cardetails/:Id">
            <CarDetails/>
-         </Route>
-         <Route path="/checkout">
+         </PrivateRoute>
+         <Route path="/checkout/:Id">
            <Checkout/>
          </Route>
          <Route path="/dashboard">
            <Dashboard/>
          </Route>
          <Route path="/myorders">
-           <Myorders/>
+           <MyOrders/>
          </Route>
          <Route path="/givereview">
            <Givereview/>

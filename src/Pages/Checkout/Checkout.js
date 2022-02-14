@@ -6,27 +6,27 @@ import useAuth from '../../Hooks/useAuth';
 
 const Checkout = () => {
     const [product, setProduct] = useState([])
-    const [packageDetails, setPackageDetails] = useState({})
-    const {serviceId} = useParams();
+    const [productDetails, setProductDetails] = useState({})
+    const {Id} = useParams();
 
     useEffect(()=>{
-        fetch(`https://fast-coast-67551.herokuapp.com/packages`)
+        fetch(`http://localhost:5000/products`)
         .then(res => res.json())
         .then(data => setProduct(data))
     },[])
 
     useEffect(()=>{
         const foundService = product.find(
-            (products)=>products._id===serviceId);
-            setPackageDetails(foundService);
+            (products)=>products._id===Id);
+            setProductDetails(foundService);
       
-    },[product,serviceId]);
+    },[product,Id]);
   
     //useform use here and POST Method Apply here
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const { user } = useAuth();
     const onSubmit = data => {
-        fetch('https://fast-coast-67551.herokuapp.com/orders', {
+        fetch('http://localhost:5000/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -52,7 +52,7 @@ const Checkout = () => {
                 <input className="block p-2 mx-auto mt-2 bg-gray-100 border-b-2 rounded border-rose-200 w-96"  defaultValue={user.displayName} {...register("name",{ required: true })} />
                 <input className="block p-2 mx-auto mt-2 bg-gray-100 border-b-2 rounded border-rose-200 w-96" defaultValue={user.email} {...register("email", { required: true })} />
                 {errors.email && <span className="error">This field is required</span>}
-                <input className="block p-2 mx-auto mt-2 bg-gray-100 border-b-2 rounded border-rose-200 w-96" defaultValue={packageDetails?.name} {...register("packageName",{ required: true })} />
+                <input className="block p-2 mx-auto mt-2 bg-gray-100 border-b-2 rounded border-rose-200 w-96" defaultValue={productDetails?.name} {...register("packageName",{ required: true })} />
                 <input className="block p-2 mx-auto mt-2 bg-gray-100 border-b-2 rounded border-rose-200 w-96" placeholder="Address" defaultValue="" {...register("address",{ required: true })} />
                 <input className="block p-2 mx-auto mt-2 bg-gray-100 border-b-2 rounded border-rose-200 w-96" placeholder="Message" defaultValue="" {...register("message",{ required: true })} />
                 <input className="block p-2 mx-auto mt-2 bg-gray-100 border-b-2 rounded border-rose-200 w-96" placeholder="Phone number" defaultValue="" {...register("phone",{ required: true })} />

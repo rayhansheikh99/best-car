@@ -1,78 +1,31 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import AllReview from './../../AllReview/AllReview';
+
 
 const Review = () => {
+
+  const [reviews, setReviews]=useState([])
+  // data fetch 
+  useEffect(()=>{
+      fetch('http://localhost:5000/reviews')
+      .then(res=>res.json())
+      .then(data=> setReviews(data))
+
+  },[])
     return (
         <div data-aos="zoom-in">
             <h5 className='mt-10 font-mono text-2xl font-bold text-center'>Customer Reviews</h5>
             <p class="text-xl italic mx-auto text-gray-700 max-w-4xl text-center mt-8">
         "Managing customer reviews is vital for modern businesses. Maximize the impact of what your customers are saying about our products"
       </p>
-            <div id="carouselExampleCaptions" class="carousel my-10 slide relative rounded-xl bg-slate-300 sm:mx-20 py-8 carousel-dark" data-bs-ride="carousel">
-  <div class="carousel-inner relative w-full overflow-hidden">
-    <div class="carousel-item active relative float-left w-full text-center">
-      <p class="text-xl italic mx-auto text-gray-700 max-w-4xl">
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet
-        numquam iure provident voluptate esse quasi, voluptas nostrum quisquam!"
-      </p>
-      <div class="mt-12 mb-6 flex justify-center">
-        <img
-          src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp"
-          class="rounded-full w-24 h-24 shadow-lg"
-          alt="smaple"
-        />
-      </div>
-      <p class="text-gray-500">- Anna Morian</p>
-    </div>
-    <div class="carousel-item relative float-left w-full text-center">
-      <p class="text-xl italic mx-auto text-gray-700 max-w-4xl">
-        "Neque cupiditate assumenda in maiores repudiandae mollitia adipisci maiores
-        repudiandae mollitia consectetur adipisicing architecto elit sed adipiscing
-        elit."
-      </p>
-      <div class="mt-12 mb-6 flex justify-center">
-        <img
-          src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(31).webp"
-          class="rounded-full w-24 h-24 shadow-lg"
-          alt="smaple"
-        />
-      </div>
-      <p class="text-gray-500">- Teresa May</p>
-    </div>
-    <div class="carousel-item relative float-left w-full text-center">
-      <p class="text-xl italic mx-auto text-gray-700 max-w-4xl">
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-        dolore eu fugiat nulla pariatur est laborum neque cupiditate assumenda in
-        maiores."
-      </p>
-      <div class="mt-12 mb-6 flex justify-center">
-        <img
-          src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp"
-          class="rounded-full w-24 h-24 shadow-lg"
-          alt="smaple"
-        />
-      </div>
-      <p class="text-gray-500">- Kate Allise</p>
-    </div>
+    <div className='grid justify-center gap-6 mx-16 mt-6 mb-6 text-center lg:grid-cols-3'>
+    
+            {
+                reviews.map(review => <AllReview key={review._id} review={review}/>)
+            }
   </div>
-  <button
-    class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
-    type="button"
-    data-bs-target="#carouselExampleCaptions"
-    data-bs-slide="prev"
-  >
-    <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button
-    class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
-    type="button"
-    data-bs-target="#carouselExampleCaptions"
-    data-bs-slide="next"
-  >
-    <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+  
+
         </div>
     );
 };
