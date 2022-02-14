@@ -35,7 +35,7 @@ const Givereview = () => {
                 <div  className=''>
                     <Dashboardall/>
                 </div>
-                <div className=''>
+                <div data-aos="zoom-in" className=''>
                 <h4 className='mb-8 text-2xl'>Give Your Review</h4>
             <form className="" onSubmit={handleSubmit(onSubmit)}>
         

@@ -21,6 +21,10 @@ import AuthProvider from "./Contexts/AuthProvider";
 import CarDetails from './Pages/CarDetails/CarDetails';
 import Checkout from "./Pages/Checkout/Checkout";
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import AddProduct from "./Pages/AddProduct/AddProduct";
+import ManageOrders from './Pages/ManageOrders/ManageOrders';
+import ManageProducts from './Pages/ManageProducts/ManageProducts';
+import MakeAdmin from './Pages/MakeAdmin/MakeAdmin';
 
 function App() {
   AOS.init();
@@ -61,6 +65,18 @@ function App() {
          </Route>
          <Route path="/products">
            <Allcar/>
+         </Route>
+         <Route path="/addproduct">
+           <AddProduct/>
+         </Route>
+         <Route path="/manageorders">
+           <ManageOrders/>
+         </Route>
+         <Route path="/manageproducts">
+           <ManageProducts/>
+         </Route>
+         <Route path="/makeadmin">
+           <MakeAdmin/>
          </Route>
          <Route path="/login">
            <Login/>

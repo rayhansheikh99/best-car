@@ -28,7 +28,9 @@ const CarDetails = () => {
         <div>
             <Navbar/>
             
-<div className='grid grid-cols-2 m-28'>
+<div data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500" className='grid grid-cols-2 m-28'>
 <img className="object-cover w-full rounded-t-lg h-96 md:h-80 md:w-full md:rounded-none md:rounded-l-lg" src={productDetails?.image} alt=""/>
 <div className="flex flex-col ml-10">
 <h5 className="mb-6 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{productDetails?.name}</h5>

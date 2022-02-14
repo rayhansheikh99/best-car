@@ -167,7 +167,7 @@ const Footer = () => {
                 <ul className='mt-8'>
                   
                   <Link className="block text-center" as={Link} to="/home">Home</Link>
-                  <Link className="block text-center" as={Link} to="/products">Packages</Link>
+                  <Link className="block text-center" as={Link} to="/products">Cars</Link>
                   <Link className="block text-center" as={Link} to="/about">About Us</Link>
                   <Link className="block text-center" as={Link} to="/contact">Contact Us</Link>
             
