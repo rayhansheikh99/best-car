@@ -10,7 +10,7 @@ const Checkout = () => {
     const {Id} = useParams();
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/products`)
+        fetch(`https://boiling-crag-65748.herokuapp.com/products`)
         .then(res => res.json())
         .then(data => setProduct(data))
     },[])
@@ -26,7 +26,7 @@ const Checkout = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const { user } = useAuth();
     const onSubmit = data => {
-        fetch('http://localhost:5000/orders', {
+        fetch('https://boiling-crag-65748.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

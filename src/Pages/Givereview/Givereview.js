@@ -12,7 +12,7 @@ const Givereview = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data)
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://boiling-crag-65748.herokuapp.com/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
