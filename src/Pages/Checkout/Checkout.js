@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
+import swal from 'sweetalert';
 
 const Checkout = () => {
     const [product, setProduct] = useState([])
@@ -36,7 +37,12 @@ const Checkout = () => {
             .then(res => res.json())
             .then(result => {
                 if (result.insertedId) {
-                    alert('Order processed Successfully');
+                    swal({
+                        title: "Good job!",
+                        text: "Order Complete Successfully",
+                        icon: "success",
+                        button: "Done",
+                      });
                     reset();
                 }
             })

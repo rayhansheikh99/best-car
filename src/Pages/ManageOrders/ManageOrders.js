@@ -1,6 +1,8 @@
 import React,{useEffect, useState} from 'react';
 import Navbar from './../Header/Menu/Navbar';
 import Dashboardall from './../Dashboardall';
+import swal from 'sweetalert';
+
 
 const ManageOrders = () => {
     const [orders, setOrders]=useState([])
@@ -24,7 +26,12 @@ const ManageOrders = () => {
         .then(res => res.json())
         .then(data => {
             if(data.deletedCount > 0){
-                alert('Deleted Successfully');
+                swal({
+                    title: "Good job!",
+                    text: "Order Delete Successfully",
+                    icon: "success",
+                    button: "Done",
+                  });                
                 const remainingOrders = orders.filter(order => order._id!==id);
                 setOrders(remainingOrders);
             }
@@ -36,26 +43,26 @@ const ManageOrders = () => {
     return (
         <div>
             <Navbar/>
-            <div className='grid grid-cols-2'>
-                <div  className=''>
+            <div className='flex flex-row'>
+                <div  className='basis-1/4'>
                     <Dashboardall/>
                 </div>
-                <div data-aos="zoom-in">
-                <div className=' mb-5 text-xl'><h2 className=''>Manage All Order</h2></div>
-            <div className='grid justify-center gap-6 mt-6 mb-6 mr-16 text-center lg:grid-cols-1'>
+                <div className='basis-3/4' data-aos="zoom-in">
+                <div className='text-center mb-5 bg-slate-600 py-3 text-white text-3xl'><h2 className=''>Manage All Order</h2></div>
+            <div className='grid justify-center gap-6 mt-6 mb-6 mr-16 lg:grid-cols-1'>
             
              <ul>
                 {
                     //showing data here
-                    orders.map(order => <div data-aos="zoom-in" className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+                    orders.map(order => <div data-aos="zoom-in" className="block max-w-sm p-6 bg-gray-400 text-dark font-serif font-bold border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
                         key={order._id}>
-                        <div className="list-group-flush ">
+                        <div className="">
                         <p className='' >Product: {order.productName}</p>
                         <p>E-mail: {order.email}</p>
                         <p>Phone: {order.phone}</p>
                     </div>
-                    <div>
-                    <button onClick={()=>handleDeleteOrder(order._id)} className='inline p-2 mt-2 bg-red-500 rounded text-white hover:bg-black'>DELETE</button>
+                    <div className=''>
+                    <button onClick={()=>handleDeleteOrder(order._id)} className='block mx-auto p-2 mt-2 bg-red-500 rounded text-white hover:bg-black'>DELETE</button>
                     {/* <Button className='px-2 py-2 me-2'>{order.status}</Button> */}
                     </div>
                     </div>)

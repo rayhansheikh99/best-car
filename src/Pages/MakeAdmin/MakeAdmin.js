@@ -37,16 +37,16 @@ const MakeAdmin = () => {
     return (
         <div>
             <Navbar/>
-            <div className='grid grid-cols-2'>
-                <div  className=''>
+            <div className='flex flex-row'>
+                <div  className='basis-1/4'>
                     <Dashboardall/>
                 </div>
-                <div data-aos="zoom-out">
-                <h4 className='mt-5 text-xl'>Make an Admin</h4>
+                <div className='basis-3/4' data-aos="zoom-out">
+                <h4 className='text-center mb-5 bg-slate-600 py-3 text-white text-3xl'>Make an Admin</h4>
                     <form  onSubmit={handleAdminSubmit}>
-                    <input onBlur={handleOnBlur} className=' block p-2 mt-2 bg-gray-100 border-b-2 rounded border-rose-200 w-96' type="email" placeholder="Enter email">
+                    <input onBlur={handleOnBlur} className=' block mx-auto p-2 mt-2 bg-gray-100 border-b-2 rounded border-rose-200 w-96' type="email" placeholder="Enter email">
                     </input>
-                    <button className='block w-48 p-2 mt-2 mb-6 font-mono font-bold bg-blue-500 rounded-2xl hover:bg-orange-400' type="submit">Make Admin</button>
+                    <button className='block mx-auto w-48 p-2 mt-2 mb-6 font-mono font-bold bg-blue-500 rounded-2xl hover:bg-orange-400' type="submit">Make Admin</button>
                     </form>
                 </div>
         </div>

@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Navbar from './../Header/Menu/Navbar';
 import Dashboardall from './../Dashboardall';
+import swal from 'sweetalert';
 
 const ManageProducts = () => {
 
@@ -24,7 +25,12 @@ const ManageProducts = () => {
         .then(res => res.json())
         .then(data => {
             if(data.deletedCount > 0){
-                alert('Deleted Successfully');
+                swal({
+                    title: "Good job!",
+                    text: "Item Delete Successfully",
+                    icon: "success",
+                    button: "Done",
+                  });
                 const remainingProducts = products.filter(product => product._id!==id);
                 setProducts(remainingProducts);
                 
@@ -42,9 +48,9 @@ const ManageProducts = () => {
                     <Dashboardall/>
                 </div>
                 <div className='basis-3/4'>
-                <h4 className='mt-5 text-xl text-center'>PRODUCT MANAGEMENT</h4>
+                <h4 data-aos="zoom-out" className='text-center mb-5 bg-slate-600 py-3 text-white text-3xl'>PRODUCT MANAGEMENT</h4>
                     <div className='mt-5'>
-                    <div><h4 className='text-center text-xl my-6'>OUR CARS</h4></div>
+                    <div><h4 data-aos="zoom-out" className='text-center text-3xl my-6'>OUR CARS</h4></div>
                         <div className="grid justify-center gap-6 mx-16 mb-6 lg:grid-cols-3">
                         
                         {

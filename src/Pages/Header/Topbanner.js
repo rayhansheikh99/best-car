@@ -28,7 +28,7 @@ const Topbanner = () => {
                 <span className="inline">+880123688888</span>
               </p>
             </div>
-            <span className="flex p-2 mr-24 bg-indigo-800 rounded-lg">
+            <span className="flex p-2 mr-8 bg-indigo-800 rounded-lg">
                 <ShoppingCartIcon className="w-6 h-6 text-white" aria-hidden="true" />
               </span>
             <div className="flex ">

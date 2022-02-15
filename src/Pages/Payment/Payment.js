@@ -6,12 +6,12 @@ const Payment = () => {
     return (
         <div>
             <Navbar/>
-            <div className='grid grid-cols-2'>
-                <div  className=''>
+            <div className='flex flex-row'>
+                <div  className='basis-1/4'>
                     <Dashboardall/>
                 </div>
-                <div>
-                    <h1>Payment coming soon</h1>
+                <div className='basis-3/4'>
+                    <h1 className='text-center mb-5 bg-slate-600 py-3 text-white text-3xl'>Payment coming soon</h1>
                 </div>
             </div>
         </div>

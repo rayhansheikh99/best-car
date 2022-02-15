@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './../Header/Menu/Navbar';
 import Dashboardall from './../Dashboardall';
 import { useForm } from 'react-hook-form';
+import swal from 'sweetalert';
 
 const AddProduct = () => {
 
@@ -18,7 +19,12 @@ const AddProduct = () => {
             .then(res => res.json())
             .then(result => {
                 if (result.insertedId) {
-                    alert('Item Added Successfully');
+                    swal({
+                        title: "Good job!",
+                        text: "Item Successfully Added",
+                        icon: "success",
+                        button: "Done",
+                      });
                     reset();
                 }
             })
@@ -26,13 +32,13 @@ const AddProduct = () => {
     return (
         <div>
             <Navbar/>
-            <div className='grid grid-cols-2'>
-                <div  className=''>
+            <div className='flex flex-row'>
+                <div  className='basis-1/4'>
                     <Dashboardall/>
                 </div>
-                <div data-aos="zoom-out">
-                <h4 className='text-xl'>Add Product From Here</h4>
-              <form  className="" onSubmit={handleSubmit(onSubmit)}>
+                <div className='basis-3/4' data-aos="zoom-out">
+                <h4 className='text-center mb-5 bg-slate-600 py-3 text-white text-3xl'>Add Product From Here</h4>
+              <form  className="grid justify-center" onSubmit={handleSubmit(onSubmit)}>
           
                   <input className="block p-2 mt-2 bg-gray-100 border-b-2 rounded border-rose-200 w-96"  placeholder="Product Name" defaultValue="" {...register("name",{ required: true })} />
                   <input className="block p-2 mt-2 bg-gray-100 border-b-2 rounded border-rose-200 w-96"  placeholder="Price" defaultValue="" {...register("price", { required: true })} />
