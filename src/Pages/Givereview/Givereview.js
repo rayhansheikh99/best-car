@@ -47,7 +47,7 @@ const Givereview = () => {
         
                 <input className="block mx-auto p-2 bg-gray-100 border-b-2 rounded border-rose-200 w-96" defaultValue={user.displayName} {...register("name",{ required: true })} />
                 {/* <input placeholder="Give Rating(0-5)" defaultValue="" {...register("rating", { required: true })} /> */}
-                <input className="block mx-auto p-2 mt-2 bg-gray-100 border-b-2 rounded border-rose-200 w-96" placeholder="Write Your comment" defaultValue="" {...register("review",{ required: true })} />
+                <textarea className="block mx-auto p-2 mt-2 bg-gray-100 border-b-2 rounded border-rose-200 w-96" placeholder="Write Your comment" defaultValue="" {...register("review",{ required: true })} />
                 <button type="submit" className='block mx-auto w-48 p-2 mt-2 mb-6 font-mono font-bold bg-blue-500 rounded-2xl hover:bg-orange-400'>Submit</button>
             </form>
                 </div>

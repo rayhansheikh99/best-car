@@ -62,7 +62,7 @@ const Checkout = () => {
                 {errors.email && <span className="error">This field is required</span>}
                 <input className="block p-2 mx-auto mt-2 bg-gray-100 border-b-2 rounded border-rose-200 w-96" defaultValue={productDetails?.name} {...register("productName",{ required: true })} />
                 <input className="block p-2 mx-auto mt-2 bg-gray-100 border-b-2 rounded border-rose-200 w-96" placeholder="Address" defaultValue="" {...register("address",{ required: true })} />
-                <input className="block p-2 mx-auto mt-2 bg-gray-100 border-b-2 rounded border-rose-200 w-96" placeholder="Message" defaultValue="" {...register("message",{ required: true })} />
+                <textarea className="block p-2 mx-auto mt-2 bg-gray-100 border-b-2 rounded border-rose-200 w-96" placeholder="Message" defaultValue="" {...register("message",{ required: true })} />
                 <input className="block p-2 mx-auto mt-2 bg-gray-100 border-b-2 rounded border-rose-200 w-96" placeholder="Phone number" defaultValue="" {...register("phone",{ required: true })} />
                 <button type="submit" className='block w-48 p-2 mx-auto mt-2 mb-6 font-mono font-bold bg-blue-500 rounded-2xl hover:bg-orange-400'>CONFIRM ORDER</button>
             </form>
