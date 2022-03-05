@@ -5,7 +5,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Link } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 const Menu = () => {
-  const {user, logOut} = useAuth();
+  const {user} = useAuth();
   const navigation = [
     { name: 'HOME', href: '/home' },
     { name: 'CARS', href: '/products' },

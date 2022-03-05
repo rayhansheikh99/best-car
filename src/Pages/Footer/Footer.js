@@ -175,7 +175,7 @@ const Footer = () => {
       </div>
 
       <div className="grid justify-center mt-8 lg:ml-16">
-      <img className='h-28 w-60' src='https://www.seekpng.com/png/detail/208-2082472_we-accept-card-payments-visa-mastercard-decal-sticker.png' alt=''></img>
+      <img className='h-28 w-60' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQv73_ZbSHvBTQ5fsuBX0JU3PqK0rMXW42ug&usqp=CAU' alt=''></img>
         
       </div>
     </div>
