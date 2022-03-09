@@ -48,7 +48,7 @@ const ManageProducts = () => {
                     <Dashboardall/>
                 </div>
                 <div className='basis-3/4'>
-                <h4 data-aos="zoom-out" className='text-center mb-5 bg-slate-600 py-3 text-white text-3xl'>PRODUCT MANAGEMENT</h4>
+                <h4 data-aos="zoom-out" className='text-center mb-5 bg-slate-600 py-3 text-white text-xl lg:text-3xl'>PRODUCT MANAGEMENT</h4>
                     <div className='mt-5'>
                     <div><h4 data-aos="zoom-out" className='text-center text-3xl my-6'>OUR CARS</h4></div>
                         <div className="grid justify-center gap-6 mx-16 mb-6 lg:grid-cols-3">

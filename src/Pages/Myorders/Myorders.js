@@ -47,7 +47,7 @@ const MyOrders = () => {
         }
             }
     return (
-        <div>
+        <div className='h-screen'>
             <Navbar/>
             <div className='flex flex-row'>
                 <div  className='basis-1/4'>

@@ -5,7 +5,7 @@ import Navbar from '../Header/Menu/Navbar';
 
 const Dashboard = () => {
     return (
-        <div>
+        <div className='h-screen'>
             <Navbar/>
             
             <div className='flex flex-row'>

@@ -30,14 +30,14 @@ const AddProduct = () => {
             })
     };
     return (
-        <div>
+        <div className='h-screen'>
             <Navbar/>
             <div className='flex flex-row'>
                 <div  className='basis-1/4'>
                     <Dashboardall/>
                 </div>
                 <div className='basis-3/4' data-aos="zoom-out">
-                <h4 className='text-center mb-5 bg-slate-600 py-3 text-white text-3xl'>Add Product From Here</h4>
+                <h4 className='text-center mb-5 bg-slate-600 py-3 text-white text-xl lg:text-3xl'>Add Product From Here</h4>
               <form  className="grid justify-center" onSubmit={handleSubmit(onSubmit)}>
           
                   <input className="block p-2 mt-2 bg-gray-100 border-b-2 rounded border-rose-200 w-96"  placeholder="Product Name" defaultValue="" {...register("name",{ required: true })} />
