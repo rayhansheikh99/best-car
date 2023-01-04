@@ -9,7 +9,7 @@ const ManageProducts = () => {
    
     // data fetch 
     useEffect(()=>{
-        fetch('https://boiling-crag-65748.herokuapp.com/products')
+        fetch('https://best-car-server.onrender.com/products')
         .then(res=>res.json())
         .then(data=> setProducts(data))
 
@@ -18,7 +18,7 @@ const ManageProducts = () => {
     const handleDeleteProduct = id =>{
         const proceed = window.confirm("Are you want to delete?")
         if(proceed){
-            const url = `https://boiling-crag-65748.herokuapp.com/products/${id}`
+            const url = `https://best-car-server.onrender.com/products/${id}`
         fetch(url, {
             method:'DELETE'
         })

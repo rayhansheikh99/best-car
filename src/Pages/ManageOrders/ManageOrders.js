@@ -8,7 +8,7 @@ const ManageOrders = () => {
     const [orders, setOrders]=useState([])
     // data fetch 
     useEffect(()=>{
-        fetch('https://boiling-crag-65748.herokuapp.com/allorder')
+        fetch('https://best-car-server.onrender.com/allorder')
         .then(res=>res.json())
         .then(data=> setOrders(data))
 
@@ -19,7 +19,7 @@ const ManageOrders = () => {
        const handleDeleteOrder = id =>{
         const proceed = window.confirm("Are you want to delete?")
         if(proceed){
-            const url = `https://boiling-crag-65748.herokuapp.com/orders/${id}`
+            const url = `https://best-car-server.onrender.com/orders/${id}`
         fetch(url, {
             method:'DELETE'
         })

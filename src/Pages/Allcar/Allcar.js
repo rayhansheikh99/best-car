@@ -8,7 +8,7 @@ const Allcar = () => {
     const [products, setProducts]=useState([])
     // data fetch 
     useEffect(()=>{
-        fetch('https://boiling-crag-65748.herokuapp.com/products')
+        fetch('https://best-car-server.onrender.com/products')
         .then(res=>res.json())
         .then(data=> setProducts(data))
 

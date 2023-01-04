@@ -13,7 +13,7 @@ const Givereview = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data)
-        fetch('https://boiling-crag-65748.herokuapp.com/reviews', {
+        fetch('https://best-car-server.onrender.com/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

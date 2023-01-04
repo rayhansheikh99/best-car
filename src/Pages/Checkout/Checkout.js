@@ -15,7 +15,7 @@ const Checkout = () => {
     const currentDate = date.toLocaleDateString();
 
     useEffect(()=>{
-        fetch(`https://boiling-crag-65748.herokuapp.com/products`)
+        fetch(`https://best-car-server.onrender.com/products`)
         .then(res => res.json())
         .then(data => setProduct(data))
     },[])
@@ -53,7 +53,7 @@ const Checkout = () => {
           };
           console.log(data)
         axios
-        .post('https://boiling-crag-65748.herokuapp.com/orders',data) 
+        .post('https://best-car-server.onrender.com/orders',data) 
             .then(res => res.json())
             .then(result => {
                 if (result.insertedId) {

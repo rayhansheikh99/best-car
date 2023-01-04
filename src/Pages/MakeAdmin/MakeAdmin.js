@@ -13,7 +13,7 @@ const MakeAdmin = () => {
     }
     const handleAdminSubmit = data => {
         const user = { email };
-        fetch('https://boiling-crag-65748.herokuapp.com/users/admin', {
+        fetch('https://best-car-server.onrender.com/users/admin', {
             method: 'PUT',
             headers: {
         

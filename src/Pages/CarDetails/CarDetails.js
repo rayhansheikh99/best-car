@@ -10,7 +10,7 @@ const CarDetails = () => {
     const {Id} = useParams();
 
     useEffect(()=>{
-        fetch(`https://boiling-crag-65748.herokuapp.com/products`)
+        fetch(`https://best-car-server.onrender.com/products`)
         .then(res => res.json())
         .then(data => setProduct(data))
     },[])
